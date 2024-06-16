@@ -1,0 +1,121 @@
+Environment Set Up
+Setting Up Windows 11
+https://docs.google.com/document/d/1_-euU_PiE4-fIsVqN-7p1_2YcvkSys01NwSEJ6laFF0/edit?usp=sharing (Screenhots)
+Preparation
+•	First and foremost, I had to check if Windows 11 OS is compatible with my computer hardware; I reviewed the OS's minimum system requirements listed on the official website and compared these requirements with my computer's specifications to ensure compatibility before attempting installation.
+•	Then I selected a Windows 11 Installation Media (in my case a USB drive). I made sure it was formatted before downloading the Windows and also ensured that it was 8GB(>5GB)
+•	I downloaded the official Windows 11 ISO from the Microsoft website. 
+•	Since I was using a USB drive, I used the Media Creation Tool to create a bootable USB with the Windows 11 ISO, i.e. made sure that the USB had the necessary files to install windows 11 on my computer.
+•	Then I entered BIOS (usually by pressing F10 during boot) and ensured that Secure Boot is enabled and the boot order included my installation media.
+ 
+Installing
+•	I inserted the bootable USB and restarted my PC and booted from the USB to start the Windows 11 installation process.
+•	I followed the on-screen prompts to install Windows 11; I chose my preferred language, time format, and keyboard input method.
+•	I accepted the license terms and choose 'Custom: Install Windows only (advanced)' option.
+•	Selected the drive/partition where Windows 11 will be installed. The system rebooted several times during the process.
+3. Post-Installation Setup
+1.	I Completed the initial setup by choosing my region, keyboard layout, and connected to a network.
+2.	Signed in with my Microsoft account.
+3.	I then allowed Windows to install updates to ensure that my system is up to date.
+4.	For optimal performance, I downloaded and installed specific drivers from the HP support website.
+4. Customizations and Configurations
+1.	Desktop Personalization: I customized my desktop background, colors, and themes through Settings > Personalization.
+2.	Taskbar Settings: I customized taskbar behavior and icons via Settings > Personalization > Taskbar.
+3.	Privacy Settings: I adjusted privacy settings according to my preferences through Settings > Privacy & security.
+4.	Software Installation: Installed necessary software like browsers, office suites, development tools, etc., from official sources.
+5. Troubleshooting and Optimization
+1.	I disabled unnecessary startup programs and services through Task Manager to improve and optimize performance.
+2.	I also enabled Windows and drivers to be regularly updated, fix bugs, and improve security.
+ 
+Setting Up Visual Studio Code
+https://docs.google.com/document/d/1VdHf7AxyYGTuV5xzIbvDY862K_v7f-0Ssu5rMbrGoZ8/edit?usp=sharing -Screenshots
+1.	Download and Installation:
+o	I visited the official Visual Studio Code website and downloaded the installer for Windows.
+ 
+o	Running the installer was straightforward, and I followed the on-screen instructions to complete the installation.
+2.	Basic Configuration:
+o	After installation, I opened Visual Studio Code and familiarized myself with the interface, including the editor, sidebar, and status bar.
+Configurations and Customizations
+3.	Extensions:
+o	I accessed the Extensions view by clicking on the Extensions icon in the Activity Bar 
+o	Some essential extensions I installed were python, code runner, prettier, github classroom, pylance, etc. 
+ 
+4.	Settings:
+o	To customize settings, I went to File > Preferences > Settings 
+o	I adjusted editor preferences such as tab size and font family to match my coding style.
+5.	Themes:
+o	I changed the color theme by navigating to File > Preferences > Color Theme.
+o	Additionally, I explored and installed new themes from the Extensions view to personalize my coding environment.
+8.	Version Control (Git):
+o	Integrating Git with Visual Studio Code was crucial for version control.
+o	I ensured Git was installed on my system and used the Source Control view to manage code changes effectively.
+o	Utilizing the integrated terminal within Visual Studio Code, I executed command-line operations seamlessly.
+o	I customized shell preferences and terminal settings via VS Code settings to align with my workflow.
+
+My Git and GitHub Setup Experience
+https://docs.google.com/document/d/1nTndynMrRmQHerGM3iwh9bd8XgRYdVWSyhDYKpQ0UrE/edit?usp=sharing
+Installation
+ I started by downloading Git from git-scm.com and followed the installation instructions for my operating system. I chose the default settings during installation.
+ 
+Configuration
+After installation, I configured Git globally by setting my username and email using the following commands in the terminal:
+bash
+Copy code
+git config --global user.name "My Name"
+git config --global user.email "my.email@example.com"
+GitHub Account Setup
+I signed up for a GitHub account at github.com. I verified my email address after signing up.
+Creating and Cloning Repositories
+To create a new repository on GitHub, I navigated to the '+' sign on GitHub and followed the prompts to initialize it with a README file.
+To clone an existing repository to my local machine, I used:
+bash
+Copy code
+git clone <repository_URL>        
+ 
+My Experience Setting Up Python
+https://docs.google.com/document/d/1mnuW0-_lnpy9GRukwhowugrOLU3zryv0j-prHeNEXMg/edit?usp=sharing
+1. Downloaded Python
+I visited the official Python website at python.org and downloaded the latest stable version suitable for my operating system (Windows).
+ 
+2. Installed Python
+•	I ran the installer (.exe file) and made sure to check the box to "Add Python to PATH" during installation.
+•	Following the prompts, I completed the installation without any issues.
+3. Verified Installation
+•	After installation, I opened a command prompt and typed python --version to verify that Python was installed correctly.
+•	I confirmed that the installed Python version number was displayed.
+ 
+6. Configurations and Customizations
+•	I configured my preferred text editor, VS Code, to recognize Python and installed necessary extensions for Python development.
+•	Additionally, I ensured that Python and pip paths were correctly set in my system's environment variables.
+ 
+Setting Up MySQL: Comprehensive Documentation
+https://docs.google.com/document/d/1s6KbUEpz7dh-fHMzVhOCGbk9v2xh3KM2raLMAZYmyCQ/edit?usp=sharing
+Step 1: Installation
+I began by downloading the MySQL Community Server from the official website. Following the installation wizard, I selected the desired installation type (Typical, Complete, Custom) and configured the MySQL features accordingly. During installation, I set the root password as prompted.
+ 
+Step 2: Configuration
+Once installed, I proceeded to configure MySQL by editing the my.ini (on Windows) or my.cnf (on Linux) configuration file. Key adjustments included setting the port number (port = 3306), defining the character set (character-set-server = utf8mb4), and configuring maximum connections (max_connections = 100). I also adjusted buffer sizes such as innodb_buffer_pool_size and key_buffer_size to optimize performance.
+Step 3: Starting and Testing MySQL
+After configuration, I started the MySQL server. On Linux, I used sudo systemctl start mysql, while on Windows, I utilized the Services panel or MySQL Command Line Client. I then tested the installation by accessing MySQL Command Line Client and logging in with the root user credentials (mysql -u root -p). 
+ 
+I verified MySQL status and version by executing SELECT VERSION();.
+Step 4: Creating Users and Databases
+Next, I created a new user and granted appropriate privileges. For example:
+sql
+Copy code
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+I also created databases using CREATE DATABASE dbname;.
+
+Step 5: Additional Configurations
+I ensured that my MySQL workbench is working effectively
+ 
+Challenges faced during setup and strategies employed to overcome them
+1.	Compatibility Issues: I encountered difficulties with software versions and library compatibility. I researched compatibility requirements beforehand and utilized version managers like pyenv for Python to manage different versions effectively.
+2.	Configuration Complexity: Configuring IDEs, terminals, and plugins was time-consuming. I followed setup guides and tutorials meticulously, sought help from community forums and documentation for troubleshooting, and automated configurations using dotfiles and scripts where possible.
+3.	Performance Issues: Running resource-intensive applications and services simultaneously sometimes caused performance degradation. I optimized system resources, by utilizing profiling tools for performance analysis.
+4.	Integration Challenges: Integrating multiple tools, APIs, and services required careful planning to ensure interoperability. I meticulously planned integrations, utilized standardized protocols (e.g., RESTful APIs, JSON), and automated integration testing to detect and resolve issues early in the process.
+5.	Documentation and Knowledge Transfer: Documenting configurations and setup steps was crucial for knowledge transfer and troubleshooting. I maintained detailed setup documentation, used version control (e.g., Git) for documentation files.
+By addressing these challenges proactively and leveraging structured planning, research, and community resources, I successfully streamlined the setup process and created a robust, efficient development environment.
+
